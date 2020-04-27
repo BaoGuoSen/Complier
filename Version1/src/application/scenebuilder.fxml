@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="1115.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Mycontroller">
+   <children>
+      <HBox fx:id="top" layoutY="30.0" prefHeight="31.0" prefWidth="1115.0" style="-fx-background-color: WhiteSmoke;" />
+      <HBox layoutY="649.0" opacity="0.92" prefHeight="30.0" prefWidth="1115.0" style="-fx-background-color: WhiteSmoke; -fx-font-weight: bold;">
+         <children>
+            <Label prefHeight="23.0" prefWidth="43.0" text="就绪">
+               <HBox.margin>
+                  <Insets left="5.0" right="850.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Label>
+            <TextField editable="false" prefHeight="30.0" prefWidth="51.0" style="-fx-background-color: WhiteSmoke; -fx-border-color: black;" />
+            <TextField editable="false" prefHeight="30.0" prefWidth="51.0" style="-fx-background-color: WhiteSmoke; -fx-border-color: black;" text="数字" />
+            <TextField editable="false" prefHeight="30.0" prefWidth="51.0" style="-fx-background-color: WhiteSmoke; -fx-border-color: black;" />
+            <TextField editable="false" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: WhiteSmoke; -fx-border-color: black;" text="line 1" />
+         </children></HBox>
+      <ScrollPane layoutY="61.0" prefHeight="590.0" prefWidth="600.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="578.0" prefWidth="596.0" style="-fx-background-color: white;">
+               <children>
+                  <TextArea fx:id="fileArea" layoutX="-8.0" layoutY="-1.0" prefHeight="590.0" prefWidth="603.0" style="-fx-background-color: white; -fx-font-weight: bold;" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ScrollPane layoutX="600.0" layoutY="61.0" prefHeight="261.0" prefWidth="515.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="259.0" prefWidth="513.0">
+               <children>
+                  <TextArea fx:id="analysArea" editable="false" layoutX="-1.0" prefHeight="261.0" prefWidth="515.0" style="-fx-control-inner-background: WhiteSmoke; -fx-font-weight: bold;" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ScrollPane layoutX="599.0" layoutY="322.0" prefHeight="328.0" prefWidth="515.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="325.0" prefWidth="513.0">
+               <children>
+                  <TextArea fx:id="errorArea" editable="false" prefHeight="328.0" prefWidth="515.0" style="-fx-control-inner-background: WhiteSmoke; -fx-font-weight: bold;" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <MenuBar layoutY="-2.0" prefHeight="31.0" prefWidth="1115.0" style="-fx-font-weight: bold; -fx-background-color: white;">
+        <menus>
+          <Menu mnemonicParsing="false" text="文件(F)">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openfile" text="      打开(O)...          Ctrl+O" />
+                  <MenuItem mnemonicParsing="false" onAction="#savefile" text="      保存(S)              Ctrl+S" />
+                  <MenuItem mnemonicParsing="false" text="      另存为(A)..." />
+                  <MenuItem mnemonicParsing="false" text="      最近文件" />
+                  <MenuItem mnemonicParsing="false" text="      退出(X)" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="编辑(E)">
+            <items>
+              <MenuItem mnemonicParsing="false" text="      撤销(U)          Ctrl+Z" />
+                  <MenuItem mnemonicParsing="false" text="      剪切(T)          Ctrl+X" />
+                  <MenuItem mnemonicParsing="false" text="      复制(C)          Ctrl+C" />
+                  <MenuItem mnemonicParsing="false" text="      粘贴(P)          Ctrl+V" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="词法分析(W)">
+            <items>
+              <MenuItem mnemonicParsing="false" text="      词法分析器(A)                Ctrl+A" />
+                  <MenuItem mnemonicParsing="false" text="      NFA_DFA_MFA(N)          Ctrl+N" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="语法分析(P)">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="      语法分析器(S)               Ctrl+S" />
+                  <MenuItem mnemonicParsing="false" text="      LL(1)预测分析(P)          Ctrl+P" />
+                  <MenuItem mnemonicParsing="false" text="      运算符优先(O)               Ctrl+O" />
+                  <MenuItem mnemonicParsing="false" text="      LR分析(L)                       Ctrl+L" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="中间代码(M)" />
+            <Menu mnemonicParsing="false" text="目标代码生成(O)" />
+            <Menu mnemonicParsing="false" text="查看(V)">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="      工具栏(T)" />
+                  <MenuItem mnemonicParsing="false" text="      状态栏(S)" />
+                  <MenuItem mnemonicParsing="false" text="      显示符号表信息" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="帮助(H)">
+               <items>
+                  <MenuItem fx:id="help" mnemonicParsing="false" onAction="#help" text="      帮助" />
+                  <MenuItem mnemonicParsing="false" text="      关于Compiler(A)..." />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</Pane>
