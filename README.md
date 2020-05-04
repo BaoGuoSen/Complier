@@ -9,4 +9,6 @@
 
 ## 第二版<br>
 新增功能 <br>
-  1.语法分析，识别单词（标识符 or 关键字 or 整数 or 不能识别）并识别出对应的种别码。
+  1.语法分析，识别单词（标识符 or 关键字 or 整数 or 不能识别）并识别出对应的种别码。<br>
+ 
+  ![image]( https://github.com/BaoGuoSen/Complier/blob/master/image/analyse.png)<br>
