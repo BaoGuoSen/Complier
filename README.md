@@ -14,4 +14,4 @@
   ![image]( https://github.com/BaoGuoSen/Complier/blob/master/image/analyse.png)<br>
   
 ## 第三版<br>
-  新增算术表达式分析（递归下降）。
+  新增判断是否是算术表达式和布尔表达式（递归下降）。
